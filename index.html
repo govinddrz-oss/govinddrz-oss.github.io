@@ -6,7 +6,7 @@
   <meta name="description" content="Govind DR — Technical Support Engineer with 8+ years in Semiconductor Automation, Medical AI, and Automotive SaaS. Based in Trivandrum, Kerala."/>
   <title>Govind DR — Technical Support Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,700&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,8 +22,7 @@
       --muted:     #607080;
       --white:     #EEF4FA;
       --mono:      'JetBrains Mono', monospace;
-      --sans:      'Barlow', sans-serif;
-      --display:   'Barlow Condensed', sans-serif;
+      --sans:      'Space Grotesk', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -47,12 +46,10 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
-      font-family: var(--display);
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-family: var(--mono);
+      font-size: 0.85rem;
       color: var(--accent);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
     .nav-logo span { color: var(--muted); }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -137,28 +134,23 @@
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.1} }
 
     h1.hero-name {
-      font-family: var(--display);
-      font-size: clamp(4rem, 9vw, 8rem);
-      font-weight: 800;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 700;
       color: var(--white);
-      line-height: 0.95;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
       margin-bottom: 0.5rem;
     }
     h1.hero-name em {
-      font-style: italic;
+      font-style: normal;
       color: var(--accent);
-      font-weight: 300;
-      letter-spacing: 0.06em;
     }
     .hero-role {
       font-family: var(--mono);
-      font-size: clamp(0.78rem, 1.5vw, 0.95rem);
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
       color: var(--muted);
       margin-bottom: 2rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
     .hero-role span { color: var(--accent3); }
     .hero-desc {
@@ -227,13 +219,11 @@
       background: var(--accent2);
     }
     h2.section-title {
-      font-family: var(--display);
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
       font-weight: 700;
       color: var(--white);
       margin-bottom: 3rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      letter-spacing: -0.01em;
     }
 
     /* ── SKILLS ─────────────────────────────── */
@@ -258,13 +248,10 @@
       margin-bottom: 0.75rem;
     }
     .skill-card h3 {
-      font-family: var(--display);
-      font-size: 1.15rem;
+      font-size: 0.95rem;
       color: var(--white);
       margin-bottom: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      font-weight: 600;
     }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .skill-tag {
@@ -317,12 +304,9 @@
       margin-bottom: 0.2rem;
     }
     .tl-role {
-      font-family: var(--display);
-      font-size: 1.4rem;
-      font-weight: 700;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: var(--white);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
       margin-bottom: 0.4rem;
     }
     .tl-project {
@@ -355,12 +339,9 @@
       flex-shrink: 0;
     }
     .cert-name {
-      font-family: var(--display);
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 0.95rem;
+      font-weight: 600;
       color: var(--white);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
       margin-bottom: 0.3rem;
     }
     .cert-desc {
@@ -567,30 +548,7 @@
     }
     .portrait-dot.active { background: var(--accent); }
 
-    
-    /* ── GLITCH on hero name ────────────────── */
-    h1.hero-name {
-      position: relative;
-    }
-    @keyframes glitch-skew {
-      0%   { transform: skew(0deg); }
-      10%  { transform: skew(-1deg); }
-      20%  { transform: skew(0.5deg); }
-      30%  { transform: skew(0deg); }
-      100% { transform: skew(0deg); }
-    }
-    h1.hero-name:hover {
-      animation: glitch-skew 0.4s steps(2) forwards;
-    }
-    /* Gradient text on hero name main word */
-    h1.hero-name .hero-name-main {
-      background: linear-gradient(135deg, var(--white) 60%, var(--accent) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* ── SCROLL REVEAL ─────────────────────── */
+        /* ── SCROLL REVEAL ─────────────────────── */
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -622,7 +580,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">GOVIND<em style="font-style:italic;color:var(--muted);font-weight:300;">_DR</em></div>
+  <div class="nav-logo"><span>//</span> GOVIND_DR</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -643,8 +601,7 @@
       <span class="blink"></span>
       System Online · Trivandrum, Kerala
     </div>
-    <h1 class="hero-name"><span class="hero-name-main">GOVIND</span><br><em>DR</em></h1>
-    <p style="font-family:var(--display);font-size:clamp(0.85rem,1.8vw,1.1rem);font-weight:600;color:var(--muted);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.5rem;">SUPPORT SYSTEMS <span style="color:var(--accent)">//</span> ENGINEER ONLINE</p>
+    <h1 class="hero-name">GOVIND <em>DR</em></h1>
     <p class="hero-role">Technical Support Engineer &nbsp;·&nbsp; <span>8+ Years Experience</span></p>
     <p class="hero-desc">
       Building reliable systems at the intersection of semiconductor automation, medical AI, and automotive SaaS. Passionate about solving complex technical problems and delivering seamless user experiences.
@@ -999,7 +956,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p style="font-family:var(--display);letter-spacing:0.1em;font-size:0.85rem;"><span>GOVIND<em style="font-style:italic;color:var(--muted);font-weight:300;">_DR</em></span> &nbsp;·&nbsp; Technical Support Engineer &nbsp;·&nbsp; Trivandrum, Kerala</p>
+  <p><span>GOVIND_DR</span> · Technical Support Engineer · Trivandrum, Kerala</p>
   <p>// Built 2026</p>
 </footer>
 
